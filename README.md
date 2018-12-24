@@ -202,7 +202,7 @@
 [2]:https://www.apache.org/licenses/LICENSE-2.0.html
 [3]:https://img.shields.io/badge/API-15%2B-red.svg?style=flat
 [4]:https://android-arsenal.com/api?level=15
-[5]:https://img.shields.io/badge/release-0.0.1-red.svg
+[5]:https://img.shields.io/badge/release-1.0.1-red.svg
 [6]:https://github.com/qq2519157/qrcode-view/releases
 [7]:https://img.shields.io/badge/PRs-welcome-brightgreen.svg
 [8]:https://github.com/qq2519157/qrcode-view/pulls
