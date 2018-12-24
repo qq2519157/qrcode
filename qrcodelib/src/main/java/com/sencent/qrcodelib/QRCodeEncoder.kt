@@ -75,9 +75,11 @@ object QRCodeEncoder {
             for (y in 0 until size) {
                 for (x in 0 until size) {
                     if (matrix.get(x, y)) {
-                        pixels[y * size + x] = foregroundColor
+//                        pixels[y * size + x] = foregroundColor
+                        pixels[y * size + x] = -0x1000000
                     } else {
-                        pixels[y * size + x] = backgroundColor
+//                        pixels[y * size + x] = backgroundColor
+                        pixels[y * size + x] = -0x1
                     }
                 }
             }

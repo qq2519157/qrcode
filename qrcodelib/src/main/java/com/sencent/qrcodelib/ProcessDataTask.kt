@@ -57,7 +57,6 @@ class ProcessDataTask() : AsyncTask<Void, Void, ScanResult?>() {
     }
 
     private fun processData(qrCodeView: QRCodeView): ScanResult? {
-        IdentifyUtil.e("processData")
         if (mData == null) {
             return null
         }
@@ -65,7 +64,6 @@ class ProcessDataTask() : AsyncTask<Void, Void, ScanResult?>() {
         var width = 0
         var height = 0
         var data = mData
-        IdentifyUtil.e(data.toString())
         try {
             val parameters = camera.parameters
             val size = parameters.previewSize
@@ -104,7 +102,6 @@ class ProcessDataTask() : AsyncTask<Void, Void, ScanResult?>() {
     }
 
     override fun doInBackground(vararg params: Void?): ScanResult? {
-        IdentifyUtil.e("doInBackground")
         val qrCodeView = mQRCodeViewRef?.get() ?: return null
 
         when {

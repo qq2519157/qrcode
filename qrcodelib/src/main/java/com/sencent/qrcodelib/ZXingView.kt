@@ -14,7 +14,7 @@ import com.google.zxing.common.HybridBinarizer
  *  Create by Logan at 2018/12/21 0021
  *
  */
-class ZXingView(context: Context,attrs: AttributeSet?) : QRCodeView(context,attrs) {
+open class ZXingView(context: Context,attrs: AttributeSet?) : QRCodeView(context,attrs) {
     private var mMultiFormatReader: MultiFormatReader? = null
     private var mHintMap: Map<DecodeHintType, Any>? = null
 

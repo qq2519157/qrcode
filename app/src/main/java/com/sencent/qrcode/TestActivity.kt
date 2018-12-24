@@ -55,7 +55,6 @@ class TestActivity : AppCompatActivity(), QRCodeView.Delegate {
         Log.i(TAG, "result:$result")
         Toast.makeText(this@TestActivity, "扫描结果为：$result", Toast.LENGTH_SHORT).show()
         vibrate()
-
         mZXingView?.startSpot() // 开始识别
     }
 

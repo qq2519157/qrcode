@@ -26,7 +26,7 @@ class ScanBoxView(context: Context):View(context) {
     private val mPaint = Paint()
     private val mTipPaint=TextPaint()
 
-    private var mMaskColor: Int = Color.parseColor("#33FFFFFF")
+    private var mMaskColor: Int = Color.parseColor("#60000000")
     private var mCornerColor: Int =  Color.WHITE
     private var mCornerLength: Int = IdentifyUtil.dp2px(context, 20f)
     private var mCornerSize: Int = IdentifyUtil.dp2px(context, 3f)

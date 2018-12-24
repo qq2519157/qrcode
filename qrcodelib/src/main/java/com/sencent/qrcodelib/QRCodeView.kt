@@ -112,7 +112,7 @@ abstract class QRCodeView(context: Context,  attrs: AttributeSet?) : RelativeLay
     /**
      * 打开后置摄像头开始预览，但是并未开始识别
      */
-    fun startCamera() {
+   open fun startCamera() {
         startCamera(mCameraId)
     }
 
@@ -172,7 +172,7 @@ abstract class QRCodeView(context: Context,  attrs: AttributeSet?) : RelativeLay
     /**
      * 关闭摄像头预览，并且隐藏扫描框
      */
-    fun stopCamera() {
+  open  fun stopCamera() {
         try {
             stopSpotAndHiddenRect()
             if (mCamera != null) {
@@ -185,6 +185,19 @@ abstract class QRCodeView(context: Context,  attrs: AttributeSet?) : RelativeLay
             e.printStackTrace()
         }
 
+    }
+
+
+    fun resumeCamera(){
+        if (mCamera!=null) {
+            mCameraPreview.reactNativeShowCameraPreview()
+        }
+    }
+
+    fun pauseCamera(){
+        if (mCamera!=null) {
+            mCameraPreview.stopCameraPreview()
+        }
     }
 
     /**
@@ -383,7 +396,6 @@ abstract class QRCodeView(context: Context,  attrs: AttributeSet?) : RelativeLay
         if (!mSpotAble) {
             return
         }
-        IdentifyUtil.e("onPostParseData")
         val result = scanResult?.result
         if (TextUtils.isEmpty(result)) {
             val camera = mCamera ?: return

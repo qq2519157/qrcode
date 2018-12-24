@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--app:qrcv_customScanLineDrawable="@drawable/scan_icon_scanline"-->
+
+    <com.sencent.qrcodelib.ScanView
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_notice"
+            android:id="@+id/zxingview"
+            app:qrcv_animTime="1000"
+            app:qrcv_barCodeTipText="将条码放入框内，即可自动扫描"
+            app:qrcv_barcodeRectHeight="120dp"
+            app:qrcv_borderColor="@color/green"
+            app:qrcv_borderSize="1dp"
+            app:qrcv_cornerColor="@color/green"
+            app:qrcv_cornerDisplayType="center"
+            app:qrcv_cornerLength="20dp"
+            app:qrcv_cornerSize="3dp"
+            app:qrcv_isAutoZoom="true"
+            app:qrcv_isBarcode="false"
+            app:qrcv_isOnlyDecodeScanBoxArea="false"
+            app:qrcv_isScanLineReverse="true"
+            app:qrcv_isShowDefaultGridScanLineDrawable="false"
+            app:qrcv_isShowDefaultScanLineDrawable="true"
+            app:qrcv_isShowLocationPoint="true"
+            app:qrcv_isShowTipBackground="true"
+            app:qrcv_isShowTipTextAsSingleLine="false"
+            app:qrcv_isTipTextBelowRect="true"
+            app:qrcv_maskColor="#60000000"
+            app:qrcv_qrCodeTipText="@string/tips_scan_code"
+            app:qrcv_rectWidth="200dp"
+            app:qrcv_scanLineColor="@color/green"
+            app:qrcv_scanLineMargin="0dp"
+            app:qrcv_scanLineSize="0.5dp"
+            app:qrcv_tipTextColor="@color/green"
+            app:qrcv_tipTextSize="12sp"
+            app:qrcv_toolbarHeight="56dp"
+            app:qrcv_topOffset="65dp"
+            app:qrcv_verticalBias="-1"/>
+
+    <TextView
+            android:id="@+id/tv_notice"
+            android:text="扫描模块"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:padding="10dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <ImageView
+            android:id="@+id/flash"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:padding="10dp"
+            android:clickable="true"
+            android:src="@drawable/flash_selected_selector"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+</android.support.constraint.ConstraintLayout>
