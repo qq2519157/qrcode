@@ -11,21 +11,21 @@
     在你的module的build.gradle文件
 
     ```gradle
-    implementation 'com.log1992:qrcodelib:0.0.1'
+    implementation 'com.log1992:qrcodelib:1.0.1'
     ```
     ### Maven:
     ```maven
    <dependency>
-    <groupId>com.log1992</groupId>
-    <artifactId>qrcodelib</artifactId>
-     <version>0.0.1</version>
+     <groupId>com.log1992</groupId>
+     <artifactId>qrcodelib</artifactId>
+     <version>1.0.1</version>
      <type>pom</type>
-    </dependency>
+   </dependency>
     ```
     ### Lvy
     ```lvy
-    <dependency org='com.log1992' name='qrcodelib' rev='0.0.1'>
-     <artifact name='qrcodelib' ext='pom' ></artifact>
+    <dependency org='com.log1992' name='qrcodelib' rev='1.0.1'>
+      <artifact name='qrcodelib' ext='pom' ></artifact>
     </dependency>
     ```
     ###### 如果Gradle出现compile失败的情况，可以在Project的build.gradle里面添加如下仓库地址：
