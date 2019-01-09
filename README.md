@@ -11,20 +11,20 @@
     在你的module的build.gradle文件
 
     ```gradle
-    implementation 'com.log1992:qrcodelib:1.0.1'
+    implementation 'com.log1992:qrcodelib:1.0.2'
     ```
     ### Maven:
     ```maven
    <dependency>
      <groupId>com.log1992</groupId>
      <artifactId>qrcodelib</artifactId>
-     <version>1.0.1</version>
+     <version>1.0.2</version>
      <type>pom</type>
    </dependency>
     ```
     ### Lvy
     ```lvy
-    <dependency org='com.log1992' name='qrcodelib' rev='1.0.1'>
+    <dependency org='com.log1992' name='qrcodelib' rev='1.0.2'>
       <artifact name='qrcodelib' ext='pom' ></artifact>
     </dependency>
     ```
@@ -191,7 +191,7 @@
     ```
  * ### 注意事项
     * 必须实现QRCodeView.Delegate 接口,回调来处理扫描的结果
-    * 建议在跳转至其它界面(比如相册选择界面)时调用```mZXingView?.stopCamera()``,在onResume()方法中重新初始化相机并开始扫描
+    * 建议在跳转至其它界面(比如相册选择界面)时调用```mZXingView?.stopCamera()```,在onResume()方法中重新初始化相机并开始扫描
         ```
          private fun startScan() {
                 mZXingView?.setDelegate(this)
@@ -202,7 +202,7 @@
                 mZXingView?.startSpotAndShowRect() // 显示扫描框，并开始识别
             }
         ```
-        原因是在跳转至其它界面再打开一个相机,然后关闭,在调用```camera.cancelAutoFocus()``时的同步锁发生变化,无法正常取消自动对焦并且调用resumeCamera()
+        原因是在跳转至其它界面再打开一个相机,然后关闭,在调用```camera.cancelAutoFocus()```时的同步锁发生变化,无法正常取消自动对焦并且调用resumeCamera()
     * 需要自己处理相机权限,特别是6.0+动态权限处理
     
  * ### 感谢
@@ -214,7 +214,7 @@
 [2]:https://www.apache.org/licenses/LICENSE-2.0.html
 [3]:https://img.shields.io/badge/API-15%2B-red.svg?style=flat
 [4]:https://android-arsenal.com/api?level=15
-[5]:https://img.shields.io/badge/release-1.0.1-red.svg
+[5]:https://img.shields.io/badge/release-1.0.2-red.svg
 [6]:https://github.com/qq2519157/qrcode-view/releases
 [7]:https://img.shields.io/badge/PRs-welcome-brightgreen.svg
 [8]:https://github.com/qq2519157/qrcode-view/pulls
