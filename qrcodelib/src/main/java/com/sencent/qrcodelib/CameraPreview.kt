@@ -300,6 +300,7 @@ class CameraPreview(context: Context) : SurfaceView(context), SurfaceHolder.Call
     }
 
     public override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        setMeasuredDimension(widthMeasureSpec, heightMeasureSpec)
         val cameraConfigurationManager = mCameraConfigurationManager ?: return
         var width = getDefaultSize(suggestedMinimumWidth, widthMeasureSpec)
         var height = getDefaultSize(suggestedMinimumHeight, heightMeasureSpec)
@@ -322,7 +323,7 @@ class CameraPreview(context: Context) : SurfaceView(context), SurfaceHolder.Call
         )
     }
 
-     interface Delegate {
+    interface Delegate {
         fun onStartPreview()
     }
 }
