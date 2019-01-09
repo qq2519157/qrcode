@@ -1,4 +1,4 @@
-# qrcode-view
+# qrcode
 [![Apache License 2.0][1]][2]
 [![Release Version][5]][6]
 [![API][3]][4]
@@ -191,6 +191,18 @@
     ```
  * ### 注意事项
     * 必须实现QRCodeView.Delegate 接口,回调来处理扫描的结果
+    * 建议在跳转至其它界面(比如相册选择界面)时调用```mZXingView?.stopCamera()``,在onResume()方法中重新初始化相机并开始扫描
+        ```
+         private fun startScan() {
+                mZXingView?.setDelegate(this)
+                mZXingView?.startCamera() // 打开后置摄像头开始预览，但是并未开始识别
+                // zxingview.startCamera(Camera.CameraInfo.CAMERA_FACING_FRONT); // 打开前置摄像头开始预览，但是并未开始识别
+                mZXingView?.changeToScanQRCodeStyle() // 切换成扫描二维码样式
+                mZXingView?.setType(BarcodeType.TWO_DIMENSION, null) // 只识别二维条码
+                mZXingView?.startSpotAndShowRect() // 显示扫描框，并开始识别
+            }
+        ```
+        原因是在跳转至其它界面再打开一个相机,然后关闭,在调用```camera.cancelAutoFocus()``时的同步锁发生变化,无法正常取消自动对焦并且调用resumeCamera()
     * 需要自己处理相机权限,特别是6.0+动态权限处理
     
  * ### 感谢
