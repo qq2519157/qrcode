@@ -15,18 +15,18 @@
     ```
     ### Maven:
     ```maven
-  <dependency>
+    <dependency>
     <groupId>com.log1992</groupId>
     <artifactId>library</artifactId>
     <version>1.0.2</version>
     <type>pom</type>
-  </dependency>
+    </dependency>
     ```
     ### Lvy
     ```lvy
-   <dependency org='com.log1992' name='library' rev='1.0.2'>
+    <dependency org='com.log1992' name='library' rev='1.0.2'>
      <artifact name='library' ext='pom' ></artifact>
-   </dependency>
+    </dependency>
     ```
     ###### 如果Gradle出现compile失败的情况，可以在Project的build.gradle里面添加如下仓库地址：
     ```gradle
