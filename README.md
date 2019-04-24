@@ -3,6 +3,7 @@
 [![Release Version][5]][6]
 [![API][3]][4]
 [![PRs Welcome][7]][8]
+[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
  * ### 介绍
     这是一个基于ZXing的二维码扫描框架,kotlin代码编写,提供View作为扫描控件,适用于Activity和Fragment,样式可自定义.
 ***
